@@ -11,15 +11,21 @@ namespace Es_28._4
         InPrestito,
         Disponibile
     }
+    enum Settore
+    {
+        Storia,
+        Matematica,
+        Economia
+    }
     internal class Documenti
     {
         public string Codice { get; set; }
         public string Titolo { get; set; }
         public DateTime Anno { get; set; }
-        public string Settore { get; set; }
+        public Settore settore { get; set; }
         public Stato stato { get; set; }
         public string PosizioneScaffale { get; set; }
-        public string Autore { get; set; }
+        public List<Autore> Autori { get; set; }
 
     }
 }
